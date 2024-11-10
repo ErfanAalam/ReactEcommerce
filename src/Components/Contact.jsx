@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useMemo } from 'react'
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Contact = () => {
 
@@ -59,6 +62,28 @@ const Contact = () => {
         <br />
         <button type='submit'>Submit</button>
       </form>
+
+      <div className="social">
+        <a
+          href="https://www.instagram.com/clothhub03/"
+          className="anchor">
+          <h2>Instagram</h2>
+          <InstagramIcon fontSize="large" />
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61568254901212&mibextid=LQQJ4d"
+          className="anchor">
+          <h2>FaceBook</h2>
+          <FacebookIcon fontSize="large" />
+        </a>
+        <a
+          href="mailto:clothinghub67@gmail.com"
+          target="_blank"
+          className="anchor">
+          <h2>Email</h2>
+          <EmailIcon fontSize="large" />
+        </a>
+      </div>
     </>
   )
 }
