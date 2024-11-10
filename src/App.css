@@ -264,3 +264,36 @@ form{
   width: 400px;
   padding: 80px;
 }
+
+.about{
+  padding: 24px;
+  font-style: bold;
+  font-size: 24px;
+}
+
+.para{
+  padding: 24px;
+  font-size: 16px;
+}
+
+
+/* flex gap-2 text-2xl items-center */
+
+.anchor{
+  display: flex;
+  gap: 8px;
+  font-size: 24px;
+  align-items: center; 
+  color: black;
+}
+
+/* flex gap-4 justify-center mt-10 p-6 flex-wrap */
+
+.social{
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
