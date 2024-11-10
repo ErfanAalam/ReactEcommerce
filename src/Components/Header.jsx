@@ -39,7 +39,7 @@ const Header = () => {
         </div>
       </div>
       <header>
-        <h1>Ecommerce</h1>
+        <h1>ClothHub</h1>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/product">Products</a></li>

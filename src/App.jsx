@@ -36,7 +36,7 @@ function App() {
     name && localStorage.setItem(name, JSON.stringify(cartItem))
 
 
-  }, [cartItem])
+  }, [name,cartItem])
 
   function handleAddtoCart(e, product) {
     e.preventDefault()
