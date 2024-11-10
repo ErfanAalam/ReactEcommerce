@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import { useContext } from 'react'
-import { context } from '../App'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import { Nightlight } from '@mui/icons-material';
-
+import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { context } from "../App";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import { Nightlight } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const { cartItem } = useContext(context)
+  const { cartItem } = useContext(context);
 
-
-  let name = localStorage.getItem("name")
+  let name = localStorage.getItem("name");
 
   function handleSignout() {
-    localStorage.removeItem("name")
+    localStorage.removeItem("name");
   }
 
- 
-
-  const [darkmode, setDarkMode] = useState(true)
+  const [darkmode, setDarkMode] = useState(true);
 
   return (
     <div>
@@ -32,32 +29,44 @@ const Header = () => {
           ) : (
             <>
               <a href="">Hello, {name}</a>
-              <a href="" onClick={handleSignout}>Sign out</a>
+              <a href="" onClick={handleSignout}>
+                Sign out
+              </a>
             </>
           )}
-
         </div>
       </div>
       <header>
         <h1>ClothHub</h1>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/product">Products</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/product">Products</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
         </ul>
         <div className="headerright">
           <span onClick={() => setDarkMode(!darkmode)}>
-            {
-              darkmode ? <Nightlight /> : <LightModeIcon />
-            }
+            {darkmode ? <Nightlight /> : <LightModeIcon />}
           </span>
-          <a href="/cart"> <ShoppingCartIcon />  {cartItem.length} </a>
+          <a href="/cart">
+            {" "}
+            <ShoppingCartIcon /> {cartItem.length}{" "}
+          </a>
         </div>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
